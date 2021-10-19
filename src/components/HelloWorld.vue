@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card1">
-      <img src="/assets/gamerCat.png" alt="Avatar" style="width:100%" />
+      <img src="/assets/gamerCat.jpeg" alt="Avatar" style="width:100%" />
       <div class="container">
         <h4><b>Kuznetsova Valentina</b></h4>
         <p>BSBO-08-19</p>
@@ -12,11 +12,10 @@
       <form>
         <label for="fname">First Name</label>
         <input type="text" id="fname" placeholder="Your name.." />
-
         <label for="lname">Last Name</label>
         <input type="text" id="lname" placeholder="Your last name.." />
         <label for="email">Email address</label>
-        <input type="text" id="email" placeholder="Your email address.." />
+        <input type="email" id="email" placeholder="Your email address.." />
         <label for="subject">Subject</label>
         <textarea
           id="subject"
