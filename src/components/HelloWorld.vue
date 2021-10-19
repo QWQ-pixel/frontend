@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card1">
-      <img src="/assets/gamerCat.jpeg" alt="Avatar" style="width:100%" />
+      <img src="../assets/gamerCat.jpeg" alt="Avatar" style="width:100%" />
       <div class="container">
         <h4><b>Kuznetsova Valentina</b></h4>
         <p>BSBO-08-19</p>
@@ -39,6 +39,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.card {
+  margin-left: 16px;
+  padding-left: 28px;
+}
+
 .card1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
@@ -59,23 +64,23 @@ export default {
 
 .card1 {
   float: left;
-  margin-top: 60px;
+  margin-top: 30px;
   width: 320px;
-  margin-right: 10px;
+  margin-right: 20px;
   text-align: center;
   background-color: #f7f7f7;
 }
 
 .card2 {
   float: left;
-  margin-top: 60px;
+  margin-top: 30px;
   width: 320px;
-  margin-right: 10px;
+  margin-right: 20px;
   text-align: center;
   background-color: #f7f7f7; 
 }
 
-.card2 input[type="text"],
+.card2 input[type="text"], input[type="email"],
 textarea {
   width: 100%;
   padding: 10px;
