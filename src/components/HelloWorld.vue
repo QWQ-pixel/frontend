@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="card">
-        <form @submit.prevent="onFormSubmit" id="form-field">
+        <form @submit.prevent="onFormSubmit" id="form-field" class="form-field">
           <label for="fname">First Name</label>
           <input
             v-model="myForm.firstName"
@@ -35,14 +35,14 @@
             placeholder="Your email address.."
             required
           />
-          <label for="subject">Subject</label>
+          <label for="description">Description</label>
           <textarea
             v-model="myForm.description"
-            id="subject"
+            id="description"
             placeholder="Write something.."
             style="height:80px"
           ></textarea>
-          <button id="btn" type="submit" value="Submit">Submit</button>
+          <button id="button" type="submit" >Submit</button>
         </form>
       </div>
     </div>
@@ -90,15 +90,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.page-content {
+  display: flex;
+  justify-content: center;
+}
 .cards-holder {
-  margin-left: 50px;
+  margin: 50px;
   display: flex;
 }
 
 .card {
-  float: left;
-  margin-top: 30px;
   width: 320px;
+  margin-top: 30px;
   margin-right: 20px;
   text-align: center;
   background-color: #f7f7f7;
@@ -119,7 +122,8 @@ export default {
   border-radius: 5px 5px 0 0;
 }
 
-.card input, textarea {
+.card input,
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -129,7 +133,8 @@ export default {
   margin-bottom: 16px;
   resize: vertical;
 }
-.card input:focus, textarea:focus {
+.card input:focus,
+textarea:focus {
   outline: none;
   border: 1px solid rgb(235, 197, 230);
 }
@@ -159,7 +164,11 @@ export default {
   background-position: right center;
   transform: scale(1.1);
 }
-
+@media screen and (max-width: 360px) {
+  .cards-holder {
+    flex-direction: column;
+  }
+}
 h3 {
   margin: 40px 0 0;
 }
