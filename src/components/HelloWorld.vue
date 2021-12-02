@@ -1,6 +1,6 @@
 <template>
-  <div class="page-content">
-    <div class="cards-holder">
+  <div class="structure">
+    <div class="cards">
       <div class="card">
         <img src="@/assets/gamerCat.jpeg" alt="Avatar" style="width:100%" />
         <div class="container">
@@ -90,11 +90,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.page-content {
+.structure {
   display: flex;
   justify-content: center;
 }
-.cards-holder {
+
+.cards {
   margin: 50px;
   display: flex;
 }
@@ -133,6 +134,7 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
+
 .card input:focus,
 textarea:focus {
   outline: none;
@@ -148,9 +150,9 @@ textarea:focus {
   background-size: 200% auto;
   border-radius: 10px;
   border: none;
-  cursor: pointer;
   margin-bottom: 5px;
 }
+
 .card button {
   background-image: linear-gradient(
     to right,
@@ -164,20 +166,10 @@ textarea:focus {
   background-position: right center;
   transform: scale(1.1);
 }
+
 @media screen and (max-width: 360px) {
   .cards-holder {
     flex-direction: column;
   }
-}
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 </style>
