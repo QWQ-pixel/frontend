@@ -54,7 +54,7 @@ export default {
     },
     async onCheckBoxInput(id, isCompleted) {
       try {
-        await patchTodo({ id, is_completed: !isCompleted });
+        await patchTodo({ id, isCompleted: !isCompleted });
         this.fetchTodoList();
       } catch (error) {
         console.error({ error });
