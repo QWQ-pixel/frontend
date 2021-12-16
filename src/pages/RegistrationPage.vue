@@ -6,7 +6,7 @@
         </div>
         <div class="form-field">
             <label for="email">Почта</label>
-            <input v-model="emal" id="email" type="text" required>
+            <input v-model="email" id="email" type="text" required>
         </div>
         <div class="form-field">
             <label for="login">Логин</label>
@@ -25,7 +25,8 @@
 </template>
 
 <script>
-import {doRegister} from '@/netClient/dataService'
+import {doRegister} from '@/netClient/authService'
+
 export default {
     name: 'RegistrationPage',
     data: () => ({

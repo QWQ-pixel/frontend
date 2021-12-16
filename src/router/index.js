@@ -18,7 +18,7 @@ const routes = [
         name: 'about',
         meta: {
             title: 'Информация',
-            layout: 'main-layout'
+            layout: 'info-layout'
         },
         component: ()=> import('@/pages/InfoPage')
     },
@@ -36,7 +36,7 @@ const routes = [
         name: 'registration',
         meta: {
             title: 'Регистрация',
-            layout: 'auth-layout'
+            layout: 'registration-layout'
         },
         component: ()=> import('@/pages/RegistrationPage')
     },
@@ -49,5 +49,12 @@ const router = new VueRouter({
     linkExactActiveClass: 'link-exact-active',
     routes
 })
-
+router.beforeEach((to, from, next)=>{
+    const { token } = localStorage;
+    if(token || to.name === 'login' || to.name === 'registration'){
+        next();
+    }else{
+        next('/login');
+    }
+})
 export default router
