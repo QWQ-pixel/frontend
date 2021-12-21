@@ -5,7 +5,7 @@
     </section>
 </template>
 <script>
-import { createTodo } from "@/netClient/dataService";
+import { createTodo } from "@/netClient/todoService";
 
 export default {
     name: 'CreateTodo',

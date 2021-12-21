@@ -34,7 +34,7 @@ export async function fetchTodoList() {
   export async function deleteTodo({ id }) {
     try {
       const response = await http.delete("/todos/" + id);
-      return response?.data;
+      return response.data;
     } catch (error) {
       console.error({ error });
       throw error;
@@ -43,7 +43,7 @@ export async function fetchTodoList() {
   export async function deleteAllTodo() {
     try {
       const response = await http.delete("/todos");
-      return response?.data;
+      return response.data;
     } catch (error) {
       console.error({ error });
       throw error;

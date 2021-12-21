@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import {doLogout} from '@/netClient/dataService'
+import {doLogout} from '@/netClient/authService'
 
 export default {
     name: 'Navigation',

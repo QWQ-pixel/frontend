@@ -190,19 +190,19 @@ body {
   text-decoration: line-through;
 }
 
-ul li {
+li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
-  background: #eee;
+  background: rgb(243, 243, 243);
   font-size: 18px;
   transition: 0.2s;
 }
-
-ul li:nth-child(odd) {
+/* 
+li:nth-child(odd) {
   background: #f9f9f9;
-}
+} */
 
-ul li:hover {
+li:hover {
   background: #ddd;
 }

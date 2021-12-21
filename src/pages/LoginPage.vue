@@ -30,7 +30,7 @@ export default {
     async onFormSubmit() {
       try {
         const token = await doLogin(this.login.trim(), this.password.trim());
-        console.warn({ token }); //
+        // console.warn({ token }); 
         if (token) {
           this.$router.push("/");
         }
